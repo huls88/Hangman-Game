@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game</title>
+</head>
+<body>
+<header>
+  <h1>Hangman</h1>
+</header>
+<div class="mainContainer">
+  <p class="usernameBlock"><span id="username"></span></p>
+  <div class="gameBlock">
+    <h2 id="secretWord"><span id="wordsLong"></span></h2>
+    <h4 id="answerArray"></h4>
+    <h1 id="congratesMsg"></h1>
+  </div>
+</div>
+
+<!-- 	<h2>Press any key to get started</h2>
+ -->
+	<script type="text/javascript">
+// TYPES OF BEER!!!!!!!!
+
+// Game is started upon a click of a letter.--DONE
+// Computer has a word stored/Displayed on the screen for the user to guess.
+// User guesses letter.
+// Computer includes that letter as a clue or tells the user its wrong.
+// That letter cannot be guessed again, there is a record of previously guessed letters.
+// The user only has a certain amount of guesses until time is up.Limit is 10**
+// When the user fails the game is over
+// if a corret letter is guessed continue guessing letters
+// When the correct word is guessed a song plays
+// Wins/losses are tracked
+// Game continues with a new word when the game is won/lost
+
+
+//**START**//
+
+var beerTypes = ["stout", "ipa", "ales", "lagers", "malts"];
+
+var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+
+var guesses = 10;
+var wins = 0;
+var lose = 0;
+var myGuess=[];
+var userGuess = null;
+var arrayBank = [];
+
+
+  var currentWord = beerTypes[Math.floor(Math.random() * beerTypes.length)];
+
+  function wordIntoBank() {
+  for (var i = 0, j = 0; i < currentWord.length; i++) {
+    arrayBank[j] = currentWord.charAt(i);
+    j++
+    if (currentWord.charAt(i) != " ") {
+      arrayFromWord[j] = false;
+    } else {
+      arrayFromWord[j] = true;
+    }
+    j++
+   }
+   console.log(currentWord);
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+// // user presses a letter//
+// document.onkeypress = function(event) {
+//     var userGuess = event.key;
+
+//     if(userGuess === b){
+        
+//     }else{
+//         guesses--;
+//     }
+
+//     if(guesses === 0){
+//         losses++
+//     }
+
+//     document.getElementById('wins').innerHTML = "Wins: " + wins;
+//     document.getElementById('losses').innerHTML = "losses: " + losses;
+//     document.getElementById('guesses').innerHTML = "Guesses left: " + guesses;
+
+// } 
+	</script>
+</body>
+</html>
